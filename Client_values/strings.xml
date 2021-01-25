@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">MobileProject</string>
+    <string name="editText_ServerIP">Enter Server IP Address</string>
+    <string name="editKeysize">Key size</string>
+    <string name="button_setup">SETUP</string>
+    <string name="button_dh">DH KEY EXC</string>
+    <string name="button_play">SEND</string>
+    <string name="button_pause">PAUSE</string>
+    <string name="button_teardown">TEAR DOWN</string>
+    <string name="input_message">Input Message Here:</string>
+    <string name="OwnIP" />
+    <string name="button_play1">P2P RECEIVE</string>
+    <string name="button_play2">RECEIVE</string>
+</resources>
