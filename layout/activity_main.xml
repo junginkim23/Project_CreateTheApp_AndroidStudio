@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -9,23 +10,23 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context=".Server_Code.MainActivity">
+    tools:context=".Client.MainActivity">
 
     <ListView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:id="@+id/listView1"
-        android:layout_width="394dp"
-        android:layout_height="477dp"
-        android:layout_below="@+id/input_message"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_marginEnd="1dp"
-        android:layout_marginRight="1dp"
-        android:layout_weight="1"
         android:scaleType="fitXY"
+        android:layout_above="@+id/button_setup"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/input_message"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentLeft="true"
         android:stackFromBottom="false"
-        android:transcriptMode="alwaysScroll"></ListView>
+        android:transcriptMode="alwaysScroll"
+        android:layout_weight="1">
+       </ListView>
 
 
     <TextView
@@ -44,9 +45,7 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
-        android:layout_marginTop="60dp"
-        android:layout_marginEnd="112dp"
-        android:layout_marginRight="112dp"
+        android:layout_marginTop="10dp"
         android:text="@string/OwnIP"
         android:textAppearance="?android:attr/textAppearanceMedium" />
 
@@ -64,6 +63,7 @@
         android:layout_below="@+id/editText_ServerIP"
         android:hint="@string/input_message" />
 
+
     <EditText
         android:id="@+id/editText_ServerIP"
         android:layout_width="wrap_content"
@@ -71,42 +71,58 @@
         android:layout_below="@+id/OwnIP"
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
-        android:layout_marginTop="1dp"
         android:hint="@string/editText_ServerIP" />
+
+    <Button
+        android:id="@+id/button_setup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/button_dh"
+        android:layout_alignEnd="@+id/button_play"
+        android:layout_alignParentStart="true"
+        android:onClick="@string/button_setup"
+        android:text="@string/button_setup"
+        android:layout_alignRight="@+id/button_play"
+        android:layout_alignParentLeft="true" />
 
     <Button
         android:id="@+id/button_play"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentBottom="true"
         android:onClick="@string/button_play"
-        android:text="@string/button_play" />
+        android:text="@string/button_play"
+        android:layout_alignParentRight="true" />
 
 
-    <TextView
+
+    <Button
+        android:id="@+id/button_dh"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:id="@+id/textView_streamStatus"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:id="@+id/textView_sendFrame"
-        android:layout_below="@+id/textView_streamStatus"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_alignRight="@+id/textView_streamStatus"
-        android:layout_alignEnd="@+id/textView_streamStatus" />
+        android:layout_above="@+id/button_play"
+        android:hint="@string/button_dh"
+        android:text="@string/button_dh" />
+
+    <EditText
+        android:id="@+id/editKeysize"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="35dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginRight="15dp"
+        android:hint="@string/editKeysize" />
+
 
 
 </RelativeLayout>
