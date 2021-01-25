@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">MobileServer</string>
+    <string name="OwnIP" />
+    <string name="input_message">Input Message Here:</string>
+    <string name="editText_ServerIP">Enter Client IP</string>
+    <string name="button_play">START P2P CHAT</string>
+</resources>
